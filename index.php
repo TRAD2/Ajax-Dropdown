@@ -1,3 +1,7 @@
+<?php 
+include("config.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +28,8 @@
 <body>
 
 <div id="filters">
+    <span> Fetch results by &nbsp; </span>
     <select name= "fetchval" id="fetchval">
-        <span> Fetch results by &nbsp; </span>
         <option value="" disabled="" selected=""> Select Filter</option>
         <option value="">Advertisement</option>
         <option>Technology</option>
@@ -44,7 +48,6 @@
                 <th>Post Title</th>
                 <th>Post Image<th>
             </tr>
-            I
         </thead>
         <tbody>
             <tr>
