@@ -82,7 +82,7 @@ include("config.php");
                 beforesend:function(){
                     $(".container").html("<h1>loading...</h1>");
                 },
-                success:function(){
+                success:function(data){
                     $(".container").html(data);
                 }
             });
