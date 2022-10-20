@@ -29,7 +29,7 @@ include("config.php");
 
 <div id="filters">
     <span> Fetch results by &nbsp; </span>
-    <select name= "fetchval" id="fetchval">
+    <select name="fetchval" id="fetchval">
         <option value="" disabled="" selected=""> Select Filter</option>
         <option value="Advertisement">Advertisement</option>
         <option value="Technology">Technology</option>
@@ -42,7 +42,7 @@ include("config.php");
     <table class="table">
         <thead>
             <tr>
-                <th> Sr No. </th>
+                <th>Sr No.</th>
                 <th>Username</th>
                 <th>Date</th>
                 <th>Post Title</th>
@@ -78,8 +78,8 @@ include("config.php");
             $.ajax({
                 url:"fetch.php",
                 type:"post",
-                data:"request=" + value;
-                beforesend:function(){
+                data:"request=" + value,
+                beforeSend:function(){
                     $(".container").html("<h1>loading...</h1>");
                 },
                 success:function(data){

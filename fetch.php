@@ -1,13 +1,16 @@
 <?php
+
+sleep(1);
+
 include("config.php") ;
 
 if(isset($_POST['request'])){
 
     $request = $_POST['request'];
 
-    $query = "SELECT * FROM post WHERE p_title = '$request' ";
+    $query = "SELECT * FROM posts WHERE p_title = '$request' ";
 
-    $result = mysqli_query($con, $query);
+    $result = mysqli_query($conn, $query);
     $count = mysqli_num_rows($result);
 
 ?>
@@ -29,7 +32,7 @@ if(isset($_POST['request'])){
     </thead>
     <?php 
     }else{
-        echo "No Records";
+        echo "Sorry, No Records!!!";
     }
     ?>
 
